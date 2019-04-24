@@ -1,0 +1,57 @@
+#Programmer: John Many
+#Program Name: Assingment #09
+#Date Written: 12/13/18
+#===============================================================================
+#Function Opens the outout file for writing the ouput / results
+def openOutputFile(outFile):
+    outFileName = input("Type the name of the file where all output is to be written-\"end with .txt\" -> ");
+    outFile = open(outFileName , "w");
+    return outFile;
+    #End openOutputFile Function
+#===============================================================================
+#Function writes an Unsorted list of Gpa's to output file
+def writeUnsortedGpaList(count, finalCount, gpa, outFile):
+    outFile.write("\n")
+    outFile.write("=" * 110 + "\n")
+    outFile.write("UNSORTED GPA LIST" + "\n") # writes the Label/Title
+    outFile.write("=" * 110 + "\n")
+    while (count < finalGpaCount):
+        outFile.write(format(format("GPA [", "5s") + format(count + 1, "<2"), "^7s") + "]" + format(" ==> ", "^5s") + format(gpa[count], "5.2f") + "\n")
+        count = count + 1
+        #End While Loop
+    outFile.write("=" * 110 + "\n")
+    outFile.write("\n")
+    #Return count, finalGpaCount, gpa, outFile
+    #End writeUnsortedGpaList function
+#===============================================================================
+#Function opens the output file for writing the output /  results
+def openOutputFile():
+    global outFile
+    outFileName = input("Type the name of the file were all output is to be written-\"end with .txt\" -> ")
+    outFile = open(outFileName, "w")
+    #End openOutputFile function
+#===============================================================================
+#Function writes an Unsorted list of Gpa's to output file
+def writeUnsortedGpaList(count, gpa):
+    outFile.write("\n")
+    outFile.write("=" * 110 + "\n")
+    outFile.write("UNSORTED GPA LIST" + "\n") #Writes the Label/Title
+    outFile.write("=" * 110 + "\n")
+    while (count < finalGpaCount):
+         outFile.write(format(format("GPA [", "5s") + format(count + 1, "<2"), "^7s") + "]" + format(" ==> ", "^5s") + format(gpa[count], "5.2f") + "\n")
+         count = count + 1
+         #End While Loop
+    outFile.write("=" * 110 + "\n")
+    outFile.write("\n")
+    #End writeUnsortedGpaList function
+#===============================================================================
+#Function uses the bubble sort alogorithim to sort the GPA list in Ascending order
+def sortGpaList(count, finalGpaCount, gpa):
+    flag = 0 #Indicates that a count or exchange of values takes place
+    count = 0 #Intialize count index
+    while (flag == o): #The flag is set to 0 in this outer loop to begin the sort routine
+        flag = 1; #Flag is set to 1 to re-enter the loop; if no count then list is sorted
+        count = 0
+        while (count < (finalGpaCount - 1)):
+            if (gpa[count] > gpa [count + 1]):
+                
