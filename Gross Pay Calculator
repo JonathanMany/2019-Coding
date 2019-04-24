@@ -1,0 +1,48 @@
+#==========================================================
+# Programmer:   John Many
+# Program Name: Assignment #3
+# Date Written: 9/24/18
+#
+''' This program is meant to caluculate base pay, and overtime compensation
+    using an IF statement'''
+
+#==========================================================
+#Intialize Variables
+grossPay = 0.00;
+overTimeHours = 0.00;
+overTimePay = 0.00;
+regularPay = 0.00;
+#==========================================================
+#Input Statements
+employeeName = str(input("Enter the employees FULL NAME "))
+hoursWorked = float(input("How many hours did " + employeeName + " work? "))
+payRate = float(input("What is " + employeeName + "'s" +  " hourly pay rate? "))
+#==========================================================
+#Preliminary Output Statements
+print();
+print("=" * 70)
+print(format("Pay Information for: ", "27s") + format(employeeName, "27s"))
+print("=" * 70)
+print(format("Hours worked: ", ">27s") + format(hoursWorked, "9,.2f"))
+print(format("Rate of pay: $", ">27s") + format(payRate, "9,.2f"))
+#==========================================================
+#Caluculations and IF statements
+if (hoursWorked <= 40):
+    grossPay = hoursWorked * payRate;
+    print(format(" Gross Pay: $", "27s") + format(grossPay, "9,.2f"))
+
+
+else:
+                overTimeHours = hoursWorked - 40;
+                overTimePay = overTimeHours * (payRate * 1.5)
+                regularPay = payRate * hoursWorked
+                grossPay = regularPay + overTimePay
+                #Display Outputs
+                print(format("Overtime hours worked: ", ">27s") + format(overTimeHours, "9.2f"))
+                print(format("Over time pay: $" , ">27s") + format(overTimePay, "9,.2f"))
+                print(format("Regular pay: $" , ">27s") + format(regularPay, "9,.2f"))
+                print(format("Gross pay: $" , ">27s") + format(grossPay, "9,.2f"))
+                #End IF
+#===========================================================
+print("=" * 70)
+                    
