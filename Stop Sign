@@ -1,0 +1,34 @@
+#Programmer: John Many
+#Date Written: 10/21/18
+#Program Name: Assignment 
+
+
+
+import turtle
+
+#Setting The Font and FONTSIZE
+turtle.setup(1000,1000)
+RADIUS = 100
+FONTSIZE = int(RADIUS / 2)
+FONT = ("Arial", FONTSIZE, "blod")
+turtle.pensize(3)
+turtle.color("red")
+
+#Drawing the stop sign
+for i in range(8):  
+    turtle.left(45)
+    turtle.forward(50)  
+turtle.end_fill()
+
+#Postioning the "Stop"
+turtle.pensize(0)
+turtle.color("white")
+turtle.left(90)
+turtle.forward(60)
+turtle.left(90)
+turtle.end_fill()
+turtle.forward(35)
+
+turtle.color("red")
+turtle.write("STOP")
+turtle.ht()
