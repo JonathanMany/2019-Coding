@@ -1,0 +1,93 @@
+#====================================================
+#Programmer:    John Many
+#Program Name:  Total Purchases
+#Date Written: November 5th, 2018
+
+'''Purpose: The purpose of this program is to show my understanding of functions
+not so much the program istelf; which is quite simple, it is more focused on
+how the program is made. The best way I have found functions described, is
+splitting up your program into different sections, then combining them all together
+to make one program. '''
+#====================================================
+
+#Function to get Price Data 
+def getPriceData(item1, item2, item3, item4, item5):
+
+    item1 = float(input("Enter the price of Item #1: "))
+    item2 = float(input("Enter the price of Item #2: "))
+    item3 = float(input("Enter the price of Item #3: "))
+    item4 = float(input("Enter the price of Item #4: "))
+    item5 = float(input("Enter the price of Item #5: "))
+    return item1, item2, item3, item4, item5;
+#End Function
+#====================================================
+
+#Function to get Total Price Data
+def getTotalPriceData(totalPrice):
+
+    totalPrice =  (item1 + item2 + item3 + item4 + item5)
+    return totalPrice;
+#End Function
+#====================================================
+
+#Function to get Sales Tax
+def getSalesTax(tax, salestax):
+    
+    tax = 0.07
+    salesTax = (totalPrice * tax)
+    return tax, salesTax;
+#End Function
+#=====================================================
+
+#Function to get Total Sales Amount
+def getSalesAmount(salesAmount):
+
+
+    salesAmount = (salesTax + totalPrice)
+    return salesAmount;
+#End Fucntion
+#======================================================
+
+#Function to Display Price Data
+def displayTotalPriceData():
+    print();
+    print("=" * 70);
+    print("Price of Item #1 is $" + format(item1, "6.2f"))
+    print("Price of Item #2 is $" + format(item2, "6.2f"))
+    print("Price of Item #3 is $" + format(item3, "6.2f"))
+    print("Price of Item #4 is $" + format(item4, "6.2f"))
+    print("Price of Item #5 is $" + format(item5, "6.2f"))
+    print("=" * 70)
+    print("At a tax of 0.07% the your Sales Tax is $" + format(salesTax, "7.2f"))
+    print("Bringing your total to $" + format(salesAmount, "7.2f"))
+    print("=" * 70)
+#End Function
+#=======================================================
+#Main Program
+#Intialize Variables
+item1 = 0.00
+item2 = 0.00
+item3 = 0.00
+item4 = 0.00
+item5 = 0.00
+totalPrice = 0.00
+tax = 0.00
+salesTax = 0.00
+salesAmount = 0.00
+#Call getPriceData Function          
+item1, item2, item3, item4, item5 = getPriceData(item1,item2, item3, item4, item5)                                           
+#Call getTotalPriceDat Function
+totalPrice = getTotalPriceData(totalPrice)
+#Call getSalesTax Function
+tax, salesTax = getSalesTax(tax, salesTax)
+#Call getSalesAmount Function
+salesAmount = getSalesAmount(salesAmount)
+#Call displaytotalPriceData Function
+displayTotalPriceData()
+#End Program
+
+
+
+
+
+
