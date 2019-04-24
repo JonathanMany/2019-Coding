@@ -1,0 +1,49 @@
+#=============================================
+# Programmer: John Many
+# Program Name: Assignment #3
+# Date Written 9/25/18
+#=============================================
+'''The purpose of this program is to practice IF statements. In this example, we are determining the area of two
+rectangles. We are not only finding the area of both figures, but using and IF statement to determine whether or not
+they are of equal value'''
+#=============================================
+#Initalizing Variables & Basic Calculations
+varLengthOne = 10.00;
+varWidthOne = 10.00;
+varLengthTwo = 30.00;
+varWidthTwo = 40.00;
+rectangleOne = varLengthOne * varWidthOne;
+rectangleTwo = varLengthTwo * varWidthTwo;
+#============================================
+#Initial Output Statements
+print();
+print("=" * 70);
+print("The width of Rectangle #1 is %s Square Inches" % (varWidthOne))
+print("The length of Rectangle #1 is %s Square Inches" % (varLengthOne))
+print("The area of Rectangle #1 is %s Square Inches" % (rectangleOne))
+print("=" * 70);
+print("The width of Rectangle #2 is %s Square Inches" % (varWidthTwo))
+print("The length of Rectangle #2 is %s Square Inches" % (varLengthTwo))
+print("The area of Rectangle #2 is %s Square Inches" % (rectangleTwo))
+print("=" * 70);
+#===========================================
+#If Statement(s) and Final Outputs
+if (rectangleOne == rectangleTwo):
+    print("The areas for both figures are the same")
+
+else:
+    if(rectangleOne > rectangleTwo):
+        print("Rectangle #1 has a greater area than Rectangle #2")
+
+    if (rectangleOne < rectangleTwo):
+        print("Rectangle #2 has a greater area than Rectangle #1")
+
+
+'''Multiple IF statements are occuring here, however, they are being fed through one IF statement, which is the first
+one. One of the problems I encountered was that I was creating multiple IF statements instead of using the "Else"
+statement.'''        
+#============================================
+print("=" * 70);
+#End Program    
+                                
+             
