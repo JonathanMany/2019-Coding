@@ -16,3 +16,4 @@ if answer == "Yes":{
   print (dice_roll)
   } else {
     print("Thanks for playing!")
+}
